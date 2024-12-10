@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onko Karkausvuosi!!??</title>
+    <script>
+        function kark(vuosi) {
+          if ((vuosi % 4 === 0 && vuosi % 100 !== 0) || vuosi % 400 === 0) {
+            return true;
+          } else {
+          return false;
+          }
+        }
+
+        function tarkkark() {
+          let vuosi = prompt('Anna vuosiluku:')
+          vuosi = parseInt(vuosi);
+          let tulos = document.getElementById('tulos');
+          if (kark(vuosi)) {
+            tulos.textContent = `${vuosi} on karkausvuosi.`;
+          } else {
+            tulos.textContent = `${vuosi} ei ole karkausvuosi.`
+          }
+        }
+    </script>
+</head>
+<body onload="tarkkark()">
+    <p id="tulos"></p>
+</body>
+</html>
