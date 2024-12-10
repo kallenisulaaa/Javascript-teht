@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p id="room">
+  AAAAAAA
+</p>
+</body>
+<script>
+    let rooms = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
+    let name = prompt("Mikä on sinun nimesi?")
+    const room = rooms[Math.floor(Math.random() * rooms.length)];
+    document.querySelector("#room").innerHTML = name +', olet ryhmässä ' + room
+</script>
+
+</html>
